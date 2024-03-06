@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Function to display pets in the shelter - given to you!
-    function displayPets() {
+    function displayPet() {
       let petList = document.getElementById("pet-list");
       petList.innerHTML = ""; // Clear the previous pet list
   
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
       for(var i = 0; i < petShelter.length; i++){
         let pet = petShelter[i];
         let petItem = document.createElement("li");
-        petItem.textContext = `${pet.name} ${pet.type} ${pet.age}`
+        petItem.textContext = `${pet.name} ${pet.type} ${pet.age}`;
         petList.appendChild(petItem);
       }
     }         
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     addPet("Napkin", "Cat", 6);
     
     // Display the pets in the shelter
-    displayPets();
+    displayPet();
 
     //STRETCH GOALS:
     // Function to check if the pet shelter has animals that need homes (based on how many animals are in the shelter)
