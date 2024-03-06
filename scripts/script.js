@@ -24,8 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
         let petItem = document.createElement("li");
         petItem.textContext = `${pet.name} ${pet.type} ${pet.age}`;
         petList.appendChild(petItem);
+        console.log(pet);
       }
-    }         
+      }         
 
  //will assist with adding each pet item to be shown in the list on the browser{}
 
@@ -40,7 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //STRETCH GOALS:
     // Function to check if the pet shelter has animals that need homes (based on how many animals are in the shelter)
- 
+    var needHome = 4
+    if (needHome > 0){
+      console.log("Someone needs a home!");
+    }
   
     // Check if the pet shelter has animals that need homes by calling the previous function
 
