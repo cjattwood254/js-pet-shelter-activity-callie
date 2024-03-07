@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
           name: petName,
           type: petType,
           age: petAge,
-        }
+        };
         petShelter.push(pet);
         console.log(petShelter);
     }
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
       for(var i = 0; i < petShelter.length; i++){
         let pet = petShelter[i];
         let petItem = document.createElement("li");
-        petItem.textContext = `${pet.name} ${pet.type} ${pet.age}`;
+        petItem.textContent = `${pet.name} ${pet.type} ${pet.age}`;
         petList.appendChild(petItem);
         console.log(pet);
       }
@@ -41,19 +41,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //STRETCH GOALS:
     // Function to check if the pet shelter has animals that need homes (based on how many animals are in the shelter)
-    var needHome = 4
-    if (needHome > 0){
-      console.log("Someone needs a home!");
+    // var needHome = 4
+    // if (needHome > 0){
+    //   console.log("Someone needs a home!");
+    // }
+  function checkAnimalsInShelter(){
+    if(petShelter.length > 0){
+      console.log("Animals need homes!")
+    } else{
+      console.log("All animals have homes!")
     }
-  
+  }
     // Check if the pet shelter has animals that need homes by calling the previous function
-
+    checkAnimalsInShelter();
   
     // Function to calculate the average age of pets in the shelter
-   
+   function averageAge(petShelter){
+    let average = 0;
+    for(let i = 0; i, petShelter.length; i++){
+      let pet = petShelter[i];
+      average += pet.age;
+    }
+    let ageAverage = average / petShelter.length;
+   }
   
     // Calculate the average age of pets in the shelter by calling the previous function
-
+  averageAge();
 
 
   });
